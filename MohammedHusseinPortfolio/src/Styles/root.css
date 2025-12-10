@@ -1,0 +1,332 @@
+@import "tailwindcss";
+
+
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* ////////////////////////////////////////////////// */
+
+
+    /* ---------- الألوان الأساسية ---------- */
+    --color-primary: #101622;
+    /* لون بارز (Primary) */
+    --color-primary-variant: #17202F;
+    /* تدرج مساعد */
+    --color-secondary: #2b6cee6e;
+    --color-secondary_hover: #4781f56e;
+
+    /* لون ثانوي */
+    --color-border:#354055;
+    --color-accent: #2B6CEE;
+    /* لمسة بارزة/accent */
+
+    --color-bg-btn: #2B6CEE;
+    --color-bg-btn-hover: #4c84f3;
+
+    --color-bg: #101622;
+    /* خلفية عامة (dark) أو #FFFFFF لنهار */
+    --color-surface: #17202F;
+    /* سطوح البطاقات */
+
+    --color-text: #E6EEF8;
+    --color-text-secondary: #a9bbd3;
+    --color-text-placeholders: #94A3B8;
+    /* نص فرعي / placeholders */
+
+    --color-success: #10B981;
+    --color-warning: #F97316;
+    --color-danger: #EF4444;
+
+    /* ---------- درجات الشفافية للاحتياجات ---------- */
+    --glass-01: rgba(255, 255, 255, 0.04);
+    --glass-02: rgba(255, 255, 255, 0.06);
+
+    /* ---------- الظلال ---------- */
+    --shadow-soft: 0 6px 18px rgba(2, 6, 23, 0.45);
+    --shadow-card: 0 8px 30px rgba(10, 12, 20, 0.5);
+
+    /* ---------- حجم الخطوط (مقياس مرن مع rem) ---------- */
+    --font-xxs: 0.65rem;
+    /* ~10.4px */
+    --font-xs: 0.75rem;
+    /* 12px */
+    --font-sm: 0.875rem;
+    /* 14px */
+    --font-base: 1rem;
+    /* 16px */
+    --font-md: 1.125rem;
+    /* 18px */
+    --font-lg: 1.25rem;
+    /* 20px */
+    --font-xl: 1.5rem;
+    /* 24px */
+    --font-2xl: 2rem;
+    /* 32px */
+    --font-3xl: 2.5rem;
+    /* 40px */
+
+    /* ---------- متغيرات أنيميشن / انتقالات ---------- */
+    --ease-fast: cubic-bezier(.4, 0, .2, 1);
+    --ease-smooth: cubic-bezier(.2, .8, .2, 1);
+    --anim-duration-short: 160ms;
+    --anim-duration: 320ms;
+    --anim-duration-long: 600ms;
+
+    /* ---------- خطوط (تبدّل حسب المشروع) ---------- */
+    --font-family-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    --font-family-mono: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, "Courier New";
+
+
+
+}
+
+.project:hover{
+    background-color: var(--color-secondary_hover);
+    cursor: pointer;
+}
+
+.Main {
+    background-color: var(--color-primary);
+}
+
+.project,
+.skill,
+.Header,
+.info_continer,
+.icons,
+.message{
+    background-color: var(--color-primary-variant)
+}
+
+
+.btn {
+    background-color: var(--color-bg-btn);
+    color: var(--color-text);
+}
+
+.btn:hover {
+    background-color: var(--color-bg-btn-hover);
+}
+
+.mainText   {
+    color: var(--color-text);
+}
+
+.subText {
+    color: var(--color-text-secondary);
+}
+
+.placeholdersText ,.icon_normal{
+    color: var(--color-text-placeholders);
+
+}
+
+.logoCode,.icon_i {
+    color: var(--color-accent);
+}
+
+.Header {
+    margin-top: -6rem;
+}
+
+input,textarea{
+    border: 1px solid var(--color-text-placeholders);
+
+}
+
+
+.btn,
+.btn_wiewmywork {
+    background-color: var(--color-accent);
+    cursor:pointer;
+
+}
+
+.icon:hover,
+.icons>a>i:hover,
+.icons {
+    color: var(--color-accent);
+    cursor: pointer;
+
+}
+
+
+.btn_1 {
+    background-color: var(--color-primary-variant);
+
+}
+
+
+/* pc view  */
+@media (min-width:720px) {
+    .GetInTouch{
+    background-color: var(--color-primary-variant);
+    max-width: 70%;
+    margin: auto;
+    
+}
+textarea{
+    resize: none;
+    height:120px;
+    
+
+}
+
+.MySkills{
+    overflow: hidden;
+}
+.MySkills::-webkit-scrollbar{
+display: none;
+}
+
+.group{
+    display: flex;
+    width: max-content;
+    flex-direction: row;
+    animation: span 40s infinite linear;
+    gap: 1rem;
+    
+   
+}
+
+.skill{
+    
+    display: flex ;
+    flex-direction: row;
+    /* flex:0 0 5em; */ 
+    padding:0 2vb;
+    margin-right: 2em;
+    gap: 3em;
+}
+.Skills{
+}
+.MySkills{
+    /* border: 4px solid red; */
+    -webkit-mask:linear-gradient(90deg, transparent, white 20% , white 80%, transparent);
+
+}
+
+.skill >div>p{
+    display: none;
+color: var(--color-text-placeholders);
+}
+.skill >div>h1{
+    
+    font-size:x-large;
+}
+
+@keyframes span {
+    to {
+        transform:translate(calc(-50% - 0.5rem)) ;
+    }
+}
+
+
+
+
+}
+
+
+
+/* Mobile veiw */
+@media (max-width:720px) {
+    .myskills_phone p{
+        color: var(--color-text-placeholders);
+    }
+    .myskills_phone >div > div>div {
+        /* background-color: red; */
+        display: flex ;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        width: 50%;
+    }
+    .name {
+        display: none;
+    }
+    .project_skills {
+    background-color:var(--color-secondary);
+}
+
+.skillGrops>div {
+    border: 1px solid var(--color-border);
+    background-color: var(--color-primary-variant);
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    /* min-width: 50%; */
+    
+}
+.skillGrops>div>i ,.skillGrops>div>h4 {
+    color: var(--color-accent);
+    
+}
+
+textarea{
+    resize: none;
+    height:70px;
+    
+
+}
+
+}
+
+
+@media (prefers-color-scheme: light) {
+    :root {
+        /* --color-primary: #F6F6F8;
+        --color-primary-variant: #FFFFFF;
+        --color-secondary: #06B6D4;
+        --color-accent: #2B2BEE;
+
+        --color-bg-btn: #2B2BEE;
+        --color-bg-btn-hover: #4c84f3;
+
+        --color-text: #2b2f38;
+        --color-text-secondary: #525b6b;
+        --color-text-placeholders: #606976; */
+        /* ---------- الألوان الأساسية للوضع الفاتح ---------- */
+--color-primary: #ffffff; 
+/* اللون الأساسي (خلفيات واضحة) */
+
+--color-primary-variant: #f2f5f9; 
+/* تدرج مساعد */
+
+--color-secondary: #2b6cee33;
+--color-secondary_hover: #2b6cee55;
+/* لون ثانوي هادي */
+
+--color-border:#d2d8e3;
+
+--color-accent: #2B6CEE;
+/* لمسة بارزة - نفس اللون الأساسي الخاص بك */
+
+--color-bg-btn: #2B6CEE;
+--color-bg-btn-hover: #cccecf;
+
+--color-bg: #ffffff;
+/* الخلفية العامة */
+
+--color-surface: #f7f9fc;
+/* سطح البطاقات */
+
+--color-text: #1a1f29;
+/* النص الأساسي */
+
+--color-text-secondary: #4b5567;
+
+--color-text-placeholders: #94A3B8;
+/* نفس الدرجة لأنها مناسبة للفاتح والداكن */
+
+
+    }
+
+}
