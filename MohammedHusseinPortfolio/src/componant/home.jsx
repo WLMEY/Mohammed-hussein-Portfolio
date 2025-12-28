@@ -1,6 +1,5 @@
 import Header from "./Header";
 import myimage from '../assets/mohammed hussein.jpeg'
-import webpage from '../assets/webpage test1.png'
 import project1 from '../assets/furniflex.png'
 import project2 from '../assets/prayersold.png'
 import project3 from '../assets/healthcare.png'
@@ -13,6 +12,12 @@ import Project from "./projects";
 
 
 const Home = () => {
+    
+
+
+
+
+
     // const aboutme = "Creating modern and responsive web sexperiences.I bild beautiful, functional, and user-friendly websites. and application"
     const aboutme="Graduate from the Faculty of Information Systems and Computer Science from 6_October University in Egypt. I specialize in Front End Development"
     function openbage(link){
@@ -56,8 +61,8 @@ const Home = () => {
             <h1 className="text-5xl mb-10">My Projects</h1>
             <div className="Myprojects flex sm:grid sm:grid-cols-3 flex-col justify-between items-center  gap-6 "  >
 
-                <Project img={project2} title="Prayers v1.0" description="A simple tutorial on how to use a real API and solve challenges. It's a simple page to display prayer times. You can specify the country, city, or GPS. I used tailwindcss and axios, and it's responsive." link="https://github.com/WLMEY/Furniflex" skils={["js", "css"]} />
-                <Project img={project4} title="Prayers v2.0" description="A simple website that displays prayer times, similar to the old version but with the addition of Framer Motion, which gives the page more liveliness than before, along with a more harmonious color palette." link="https://github.com/WLMEY/Furniflex" skils={["js", "css"]} />
+                <Project img={project2} title="Prayers v1.0" description="A simple tutorial on how to use a real API and solve challenges. It's a simple page to display prayer times. You can specify the country, city, or GPS. I used tailwindcss and axios, and it's responsive." link="https://prayers-1ilr.vercel.app/" skils={["js", "css"]} />
+                <Project img={project4} title="Prayers v2.0" description="A simple website that displays prayer times, similar to the old version but with the addition of Framer Motion, which gives the page more liveliness than before, along with a more harmonious color palette." link="https://prayers-v2.vercel.app/" skils={["js", "css"]} />
                 <Project img={project1} title="Furni Flex" description="Furniflex is a web platform that allows users to buy and sell furniture online with ease and security. It focuses on providing a seamless shopping experience with a wide range of furniture options to suit all tastes." link="https://github.com/WLMEY/Furniflex" skils={["js", "css"]} />
                 <Project img={project3} title="Tabib" description="Tabib - Smart Medical Appointment Booking
 
