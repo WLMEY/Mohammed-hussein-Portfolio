@@ -6,7 +6,7 @@ const Project = (props) => {
     const link =props.link;
     const skils =props.skils;
 function openlinks(){
-    window.open({"https://prayers-v2.vercel.app/"},"_blank");
+    window.open({link},"_blank");
 }
     return ( 
 
